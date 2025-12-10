@@ -1,0 +1,38 @@
+.footer-container {
+    padding: 40px 10%;
+    text-align: center;
+    color: white;
+}
+
+.cta-box {
+    background-color: #172554;
+    padding: 60px 40px;
+    border-radius: 24px;
+    margin-bottom: 50px;
+
+    box-shadow: 0 20px 50px -10px rgba(23, 37, 84, 0.5);
+}
+
+.cta-box h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Alt Çizgi ve Telif Yazısı */
+.copyright-text {
+    border-top: 1px solid #1e293b; /* İnce bir çizgi çek */
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #64748b; /* Soluk gri renk */
+    font-size: 0.9rem;
+}

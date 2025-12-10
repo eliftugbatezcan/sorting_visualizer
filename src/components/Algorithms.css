@@ -1,0 +1,53 @@
+/* src/components/Algorithms.css */
+
+.algo-section {
+    padding: 60px 10%;
+    color: white;
+}
+
+.algo-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* IZGARA YAPISI (GRID) */
+.algo-grid {
+    display: grid;
+    /* Ekran genişliğine göre 3 sütun veya daha az yap */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* KART TASARIMI */
+.algo-card {
+    background-color: transparent; /* Arka plan yok */
+    border-radius: 12px;
+    overflow: hidden; /* Resim taşarsa gizle */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.algo-card:hover {
+    transform: translateY(-5px); /* Üzerine gelince zıplasın */
+}
+
+.algo-thumb {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+/* YAZI ALANI */
+.algo-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.algo-info p {
+    color: #94a3b8; /* Gri açıklama */
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
