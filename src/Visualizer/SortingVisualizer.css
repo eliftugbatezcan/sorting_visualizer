@@ -113,3 +113,94 @@ input[type='range'] {
     cursor: pointer;
     width: 100px;
 }
+/* İstatistik Paneli */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    background-color: #1e293b;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Her Bir İstatistik Kutusu */
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.stat-label {
+    color: #94a3b8; /* Soluk gri başlık */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #3b82f6; /* Mavi değerler */
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace; /* Dijital saat havası */
+    margin-top: 5px;
+}
+/* --- ALGORİTMA BİLGİ KUTUSU TASARIMI --- */
+
+.algo-info-panel {
+    width: 85%; /* Üstteki siyah kutuyla aynı genişlikte olsun */
+    background-color: #1e293b; /* Koyu Gri/Lacivert Arka Plan */
+    border-radius: 8px; /* Hafif yuvarlak köşeler */
+    padding: 25px;
+    margin-top: 30px; /* Üstten biraz boşluk */
+
+    /* SOL TARAFA MAVİ ÇİZGİ (Havalılık katar) */
+    border-left: 6px solid #3b82f6;
+    border-top: 1px solid #334155;
+    border-right: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Gölge */
+    text-align: left; /* Yazıları sola hizala */
+}
+
+/* Başlık ve O(n) Rozeti Alanı */
+.algo-info-header {
+    display: flex;
+    justify-content: space-between; /* Başlık sola, rozet sağa */
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #334155; /* Başlığın altına ince çizgi */
+}
+
+.algo-info-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+/* Karmaşıklık Rozeti (Time Complexity Badge) */
+.complexity-badge {
+    background-color: rgba(59, 130, 246, 0.1); /* Çok açık mavi arka plan */
+    color: #60a5fa; /* Açık mavi yazı */
+    border: 1px solid #3b82f6;
+    padding: 6px 12px;
+    border-radius: 20px; /* Hap şeklinde */
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: monospace; /* Kod yazısı gibi dursun */
+}
+
+/* Açıklama Metni */
+.algo-desc {
+    color: #cbd5e1; /* Okunaklı açık gri */
+    font-size: 1.05rem;
+    line-height: 1.7; /* Satır aralarını açalım, rahat okunsun */
+    margin: 0;
+}

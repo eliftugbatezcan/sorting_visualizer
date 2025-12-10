@@ -3,51 +3,71 @@
 .algo-section {
     padding: 60px 10%;
     color: white;
+    /* Arka plan rengini section'a değil, App.jsx'teki ana div'e bırakıyoruz */
 }
 
 .algo-title {
     font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
     text-align: left;
+    /* Başlığa hafif bir mavi vurgu ekleyelim */
+    background: linear-gradient(90deg, #fff, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* IZGARA YAPISI (GRID) */
 .algo-grid {
     display: grid;
-    /* Ekran genişliğine göre 3 sütun veya daha az yap */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Kartların genişliği en az 320px olsun, sığdığı kadar yan yana dizilsin */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* KART TASARIMI */
+/* --- KART TASARIMI (GÜZELLEŞTİRİLMİŞ HALİ) --- */
 .algo-card {
-    background-color: transparent; /* Arka plan yok */
-    border-radius: 12px;
-    overflow: hidden; /* Resim taşarsa gizle */
-    transition: transform 0.3s ease;
+    background-color: #1e293b; /* 1. Koyu lacivert/gri arka plan */
+    border: 1px solid #334155; /* 2. İnce, belirgin olmayan bir çerçeve */
+    border-radius: 16px; /* 3. Köşeleri iyice yuvarla */
+    padding: 20px; /* 4. İçerik kenarlara yapışmasın */
+    overflow: hidden;
     cursor: pointer;
+    transition: all 0.3s ease; /* Tüm değişimler yumuşak olsun */
+
+    /* 5. Hafif bir derinlik gölgesi */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+/* MOUSE İLE ÜZERİNE GELİNCE (HOVER) */
 .algo-card:hover {
-    transform: translateY(-5px); /* Üzerine gelince zıplasın */
+    transform: translateY(-8px); /* Biraz daha yukarı zıplasın */
+    border-color: #3b82f6; /* Çerçeve maviye dönsün */
+    /* Gölgeyi belirginleştirip mavi bir parlama ekleyelim */
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* RESİM ALANI */
 .algo-thumb {
     width: 100%;
-    height: 180px;
+    height: 200px; /* Resimler biraz daha büyük olsun */
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 12px; /* Resmin köşeleri de yuvarlak olsun */
+    margin-bottom: 20px;
+    /* Resimlerin altına çok hafif bir gölge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 /* YAZI ALANI */
 .algo-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
     font-weight: 600;
+    color: #fff;
 }
 
 .algo-info p {
-    color: #94a3b8; /* Gri açıklama */
-    font-size: 0.9rem;
-    line-height: 1.5;
+    color: #94a3b8; /* Soluk gri açıklama */
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
