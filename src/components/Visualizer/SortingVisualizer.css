@@ -23,11 +23,11 @@
 
 .array-bar {
     width: 10px;
-    background-color: #3b82f6; /* O güzel mavi renk */
+    background-color: #3b82f6;
     margin: 0 2px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    transition: height 0.3s ease; /* Boy değişirken yumuşak geçiş */
+    transition: height 0.3s ease;
 }
 
 .controls {
@@ -50,13 +50,12 @@
 .btn-control:hover {
     background-color: #3b82f6;
 }
-/* Seçim Kutusu (Dropdown) Tasarımı */
 .algo-select {
     padding: 10px 15px;
     border-radius: 6px;
-    background-color: #1e293b; /* Koyu arka plan */
-    color: white; /* Beyaz yazı */
-    border: 1px solid #3b82f6; /* Mavi çerçeve */
+    background-color: #1e293b;
+    color: white;
+    border: 1px solid #3b82f6;
     outline: none;
     font-size: 1rem;
     cursor: pointer;
@@ -64,12 +63,11 @@
 }
 
 .algo-select:hover {
-    background-color: #334155; /* Üzerine gelince hafif aç */
+    background-color: #334155;
 }
 
-/* Başlat (Play) Butonu - Biraz daha dikkat çekici olsun */
 .btn-primary-play {
-    background-color: #10b981; /* Yeşil renk (Harekete geçirir hissi) */
+    background-color: #10b981;
     color: white;
     border: none;
     padding: 10px 24px;
@@ -79,16 +77,15 @@
     font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 8px; /* İkon ile yazı arası boşluk */
+    gap: 8px;
     transition: transform 0.2s;
 }
 
 .btn-primary-play:hover {
-    background-color: #059669; /* Koyu yeşil */
-    transform: scale(1.05); /* Hafif büyüme efekti */
+    background-color: #059669;
+    transform: scale(1.05);
 }
 
-/* Slider Grubu */
 .slider-group {
     display: flex;
     gap: 20px;
@@ -107,13 +104,11 @@
     font-size: 0.8rem;
 }
 
-/* Slider'ın Kendisi (Input Range) */
 input[type='range'] {
-    accent-color: #3b82f6; /* Slider rengi mavi olsun */
+    accent-color: #3b82f6;
     cursor: pointer;
     width: 100px;
 }
-/* İstatistik Paneli */
 .stats-container {
     display: flex;
     justify-content: center;
@@ -126,7 +121,6 @@ input[type='range'] {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Her Bir İstatistik Kutusu */
 .stat-box {
     display: flex;
     flex-direction: column;
@@ -135,7 +129,7 @@ input[type='range'] {
 }
 
 .stat-label {
-    color: #94a3b8; /* Soluk gri başlık */
+    color: #94a3b8;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -143,39 +137,36 @@ input[type='range'] {
 }
 
 .stat-value {
-    color: #3b82f6; /* Mavi değerler */
+    color: #3b82f6;
     font-size: 1.5rem;
     font-weight: 700;
-    font-family: 'Courier New', Courier, monospace; /* Dijital saat havası */
+    font-family: 'Courier New', Courier, monospace;
     margin-top: 5px;
 }
-/* --- ALGORİTMA BİLGİ KUTUSU TASARIMI --- */
 
 .algo-info-panel {
-    width: 85%; /* Üstteki siyah kutuyla aynı genişlikte olsun */
-    background-color: #1e293b; /* Koyu Gri/Lacivert Arka Plan */
-    border-radius: 8px; /* Hafif yuvarlak köşeler */
+    width: 85%;
+    background-color: #1e293b;
+    border-radius: 8px;
     padding: 25px;
-    margin-top: 30px; /* Üstten biraz boşluk */
+    margin-top: 30px;
 
-    /* SOL TARAFA MAVİ ÇİZGİ (Havalılık katar) */
     border-left: 6px solid #3b82f6;
     border-top: 1px solid #334155;
     border-right: 1px solid #334155;
     border-bottom: 1px solid #334155;
 
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Gölge */
-    text-align: left; /* Yazıları sola hizala */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
-/* Başlık ve O(n) Rozeti Alanı */
 .algo-info-header {
     display: flex;
-    justify-content: space-between; /* Başlık sola, rozet sağa */
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #334155; /* Başlığın altına ince çizgi */
+    border-bottom: 1px solid #334155;
 }
 
 .algo-info-header h3 {
@@ -185,22 +176,20 @@ input[type='range'] {
     font-weight: 700;
 }
 
-/* Karmaşıklık Rozeti (Time Complexity Badge) */
 .complexity-badge {
-    background-color: rgba(59, 130, 246, 0.1); /* Çok açık mavi arka plan */
-    color: #60a5fa; /* Açık mavi yazı */
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
     border: 1px solid #3b82f6;
     padding: 6px 12px;
-    border-radius: 20px; /* Hap şeklinde */
+    border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
-    font-family: monospace; /* Kod yazısı gibi dursun */
+    font-family: monospace;
 }
 
-/* Açıklama Metni */
 .algo-desc {
-    color: #cbd5e1; /* Okunaklı açık gri */
+    color: #cbd5e1;
     font-size: 1.05rem;
-    line-height: 1.7; /* Satır aralarını açalım, rahat okunsun */
+    line-height: 1.7;
     margin: 0;
 }

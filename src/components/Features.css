@@ -1,7 +1,5 @@
-/* src/components/Features.css */
-
 .features-container {
-    padding: 60px 10%; /* Kenarlardan boşluk bırak */
+    padding: 60px 10%;
     color: white;
 }
 
@@ -9,37 +7,34 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 40px;
-    text-align: left; /* Başlık solda dursun */
+    text-align: left;
 }
 
-/* KARTLARIN DİZİLİMİ (GRID SİSTEMİ) */
 .features-grid {
     display: grid;
-    /* Ekran genişse 3 tane, darsa 1 tane sığdır */
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; /* Kartlar arası boşluk */
+    gap: 30px;
 }
 
-/* KART TASARIMI */
 .feature-card {
-    background-color: transparent; /* Arka plan şeffaf */
-    border: 1px solid #1e293b; /* İnce gri/lacivert çerçeve */
+    background-color: transparent;
+    border: 1px solid #1e293b;
     padding: 30px;
     border-radius: 12px;
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
-/* Mouse ile üzerine gelince efekt */
 .feature-card:hover {
-    border-color: #3b82f6; /* Çerçeve mavi olsun */
-    transform: translateY(-5px); /* Hafif yukarı zıplasın */
+    border-color: #3b82f6;
+    transform: translateY(-5px);
 }
 
 .icon-box {
     font-size: 1.5rem;
-    color: #3b82f6; /* İkon rengi (Mavi) */
+    color: #3b82f6;
     margin-bottom: 20px;
-    background-color: rgba(59, 130, 246, 0.1); /* İkon arkasına çok hafif mavi fon */
+    background-color: rgba(59, 130, 246, 0.1);
     width: 50px;
     height: 50px;
     display: flex;
@@ -54,7 +49,7 @@
 }
 
 .feature-card p {
-    color: #94a3b8; /* Gri açıklama yazısı */
+    color: #94a3b8;
     font-size: 0.95rem;
     line-height: 1.6;
 }

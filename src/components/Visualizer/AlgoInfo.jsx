@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AlgoInfo = ({ selectedAlgo }) => {
-    // İngilizce Çeviriler 🇬🇧
     const algoInfo = {
         bubble: {
             title: 'Bubble Sort',

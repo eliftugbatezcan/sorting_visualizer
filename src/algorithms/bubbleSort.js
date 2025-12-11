@@ -1,6 +1,6 @@
 import { sleep } from '../utils/common';
 
-export const performBubbleSort = async (array, sortingSpeed, setStats, startTime) => {
+export const performBubbleSort = (array, sortingSpeed, setStats, startTime) => {
     const arr = [...array];
     const bars = document.getElementsByClassName('array-bar');
     let compCount = 0;
@@ -11,7 +11,7 @@ export const performBubbleSort = async (array, sortingSpeed, setStats, startTime
             bars[j].style.backgroundColor = 'red';
             bars[j + 1].style.backgroundColor = 'red';
 
-            await sleep(100 - sortingSpeed);
+            sleep(100 - sortingSpeed);
             compCount++;
 
             if (arr[j] > arr[j + 1]) {

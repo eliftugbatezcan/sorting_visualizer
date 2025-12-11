@@ -1,5 +1,5 @@
 import Navbar from './components/navbar';
-import SortingVisualizer from './Visualizer/SortingVisualizer'; // ✅ YENİ ADRES (Doğru)
+import SortingVisualizer from './components/Visualizer/SortingVisualizer';
 import Features from './components/Features';
 import Algorithms from './components/Algorithms';
 import Footer from './components/Footer';

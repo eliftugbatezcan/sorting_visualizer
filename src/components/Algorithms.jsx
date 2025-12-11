@@ -1,4 +1,3 @@
-// src/components/Algorithms.jsx
 import React from 'react';
 import './Algorithms.css';
 import bubbleImg from '../assets/bubble.png';
@@ -51,7 +50,6 @@ const Algorithms = () => {
                     <div className='algo-card' key={index}>
                         <img src={algo.image} alt={algo.title} className='algo-thumb' />
 
-                        {/* Yazı Alanı */}
                         <div className='algo-info'>
                             <h3>{algo.title}</h3>
                             <p>{algo.desc}</p>

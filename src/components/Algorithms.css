@@ -1,9 +1,6 @@
-/* src/components/Algorithms.css */
-
 .algo-section {
     padding: 60px 10%;
     color: white;
-    /* Arka plan rengini section'a değil, App.jsx'teki ana div'e bırakıyoruz */
 }
 
 .algo-title {
@@ -11,54 +8,45 @@
     font-weight: 700;
     margin-bottom: 40px;
     text-align: left;
-    /* Başlığa hafif bir mavi vurgu ekleyelim */
+
     background: linear-gradient(90deg, #fff, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* IZGARA YAPISI (GRID) */
 .algo-grid {
     display: grid;
-    /* Kartların genişliği en az 320px olsun, sığdığı kadar yan yana dizilsin */
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* --- KART TASARIMI (GÜZELLEŞTİRİLMİŞ HALİ) --- */
 .algo-card {
-    background-color: #1e293b; /* 1. Koyu lacivert/gri arka plan */
-    border: 1px solid #334155; /* 2. İnce, belirgin olmayan bir çerçeve */
-    border-radius: 16px; /* 3. Köşeleri iyice yuvarla */
-    padding: 20px; /* 4. İçerik kenarlara yapışmasın */
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 20px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease; /* Tüm değişimler yumuşak olsun */
+    transition: all 0.3s ease;
 
-    /* 5. Hafif bir derinlik gölgesi */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* MOUSE İLE ÜZERİNE GELİNCE (HOVER) */
 .algo-card:hover {
-    transform: translateY(-8px); /* Biraz daha yukarı zıplasın */
-    border-color: #3b82f6; /* Çerçeve maviye dönsün */
-    /* Gölgeyi belirginleştirip mavi bir parlama ekleyelim */
+    transform: translateY(-8px);
+    border-color: #3b82f6;
     box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* RESİM ALANI */
 .algo-thumb {
     width: 100%;
-    height: 200px; /* Resimler biraz daha büyük olsun */
+    height: 200px;
     object-fit: cover;
-    border-radius: 12px; /* Resmin köşeleri de yuvarlak olsun */
+    border-radius: 12px;
     margin-bottom: 20px;
-    /* Resimlerin altına çok hafif bir gölge */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* YAZI ALANI */
 .algo-info h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -67,7 +55,7 @@
 }
 
 .algo-info p {
-    color: #94a3b8; /* Soluk gri açıklama */
+    color: #94a3b8;
     font-size: 0.95rem;
     line-height: 1.6;
 }

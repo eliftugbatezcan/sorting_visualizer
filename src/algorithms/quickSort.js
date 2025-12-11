@@ -1,49 +1,31 @@
 import { sleep } from '../utils/common';
 
-export const performQuickSort = async (array, sortingSpeed, setStats, startTime) => {
+export const performQuickSort = (array, sortingSpeed, setStats, startTime) => {
     let arr = [...array];
     let bars = document.getElementsByClassName('array-bar');
     let statsRef = { comparisons: 0, swaps: 0 };
 
-    await quickSortHelper(
-        arr,
-        0,
-        arr.length - 1,
-        bars,
-        statsRef,
-        startTime,
-        sortingSpeed,
-        setStats
-    );
+    quickSortHelper(arr, 0, arr.length - 1, bars, statsRef, startTime, sortingSpeed, setStats);
 
     for (let k = 0; k < bars.length; k++) bars[k].style.backgroundColor = '#10b981';
 };
 
-const quickSortHelper = async (
-    arr,
-    low,
-    high,
-    bars,
-    statsRef,
-    startTime,
-    sortingSpeed,
-    setStats
-) => {
+const quickSortHelper = (arr, low, high, bars, statsRef, startTime, sortingSpeed, setStats) => {
     if (low < high) {
-        let pi = await partition(arr, low, high, bars, statsRef, startTime, sortingSpeed, setStats);
-        await quickSortHelper(arr, low, pi - 1, bars, statsRef, startTime, sortingSpeed, setStats);
-        await quickSortHelper(arr, pi + 1, high, bars, statsRef, startTime, sortingSpeed, setStats);
+        let pi = partition(arr, low, high, bars, statsRef, startTime, sortingSpeed, setStats);
+        quickSortHelper(arr, low, pi - 1, bars, statsRef, startTime, sortingSpeed, setStats);
+        quickSortHelper(arr, pi + 1, high, bars, statsRef, startTime, sortingSpeed, setStats);
     }
 };
 
-const partition = async (arr, low, high, bars, statsRef, startTime, sortingSpeed, setStats) => {
+const partition = (arr, low, high, bars, statsRef, startTime, sortingSpeed, setStats) => {
     let pivot = arr[high];
     bars[high].style.backgroundColor = 'purple';
     let i = low - 1;
 
     for (let j = low; j < high; j++) {
         bars[j].style.backgroundColor = 'red';
-        await sleep(100 - sortingSpeed);
+        sleep(100 - sortingSpeed);
 
         statsRef.comparisons++;
         setStats({ ...statsRef, time: ((Date.now() - startTime) / 1000).toFixed(2) });

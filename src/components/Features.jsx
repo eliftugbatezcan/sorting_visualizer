@@ -1,4 +1,3 @@
-// src/components/Features.jsx
 import React from 'react';
 import './Features.css';
 
@@ -8,7 +7,6 @@ const Features = () => {
             <h2 className='section-title'>Simple, Fast, and Intuitive</h2>
 
             <div className='features-grid'>
-                {/* KART 1 */}
                 <div className='feature-card'>
                     <div className='icon-box'>
                         <i className='fa-solid fa-list'></i>
@@ -17,7 +15,6 @@ const Features = () => {
                     <p>Select from a variety of classic sorting algorithms.</p>
                 </div>
 
-                {/* KART 2 */}
                 <div className='feature-card'>
                     <div className='icon-box'>
                         <i className='fa-solid fa-shuffle'></i>
@@ -26,7 +23,6 @@ const Features = () => {
                     <p>Generate a random dataset or input your own.</p>
                 </div>
 
-                {/* KART 3 */}
                 <div className='feature-card'>
                     <div className='icon-box'>
                         <i className='fa-solid fa-play'></i>

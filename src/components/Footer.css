@@ -28,11 +28,10 @@
     margin-right: auto;
 }
 
-/* Alt Çizgi ve Telif Yazısı */
 .copyright-text {
-    border-top: 1px solid #1e293b; /* İnce bir çizgi çek */
+    border-top: 1px solid #1e293b;
     padding-top: 30px;
     padding-bottom: 20px;
-    color: #64748b; /* Soluk gri renk */
+    color: #64748b;
     font-size: 0.9rem;
 }

@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './SortingVisualizer.css';
 
-// 1. Componentleri çağırıyoruz
 import ArrayBars from './ArrayBars';
 import StatsPanel from './StatsPanel';
 import Controls from './Controls';
 import AlgoInfo from './AlgoInfo';
 
-// 2. Yardımcıları çağırıyoruz (utils)
-import { randomIntFromInterval } from '../utils/mathUtils'; // mathUtils'e taşıdık
+import { randomIntFromInterval } from '../utils/mathUtils';
 
-// 3. Algoritmaları çağırıyoruz (algorithms)
 import { performBubbleSort } from '../algorithms/bubbleSort';
 import { performMergeSort } from '../algorithms/mergeSort';
 import { performQuickSort } from '../algorithms/quickSort';
 import { performSelectionSort, performInsertionSort } from '../algorithms/sortingHelpers';
 
 const SortingVisualizer = () => {
-    // --- STATE TANIMLARI ---
     const [array, setArray] = useState([]);
     const [selectedAlgo, setSelectedAlgo] = useState('bubble');
     const [arraySize, setArraySize] = useState(50);
@@ -29,7 +25,6 @@ const SortingVisualizer = () => {
         resetArray();
     }, []);
 
-    // --- RESETLEME VE BOYUT AYARI ---
     const resetArray = () => {
         if (isSorting) return;
         const newArray = [];
@@ -60,8 +55,7 @@ const SortingVisualizer = () => {
         setStats({ comparisons: 0, swaps: 0, time: 0 });
     };
 
-    // --- BAŞLATMA ---
-    const startSorting = async () => {
+    const startSorting = () => {
         if (isSorting) return;
         setIsSorting(true);
         const startTime = Date.now();
@@ -69,22 +63,22 @@ const SortingVisualizer = () => {
 
         switch (selectedAlgo) {
             case 'bubble':
-                await performBubbleSort(array, sortingSpeed, setStats, startTime);
+                performBubbleSort(array, sortingSpeed, setStats, startTime);
                 break;
             case 'selection':
-                await performSelectionSort(array, sortingSpeed, setStats, startTime);
+                performSelectionSort(array, sortingSpeed, setStats, startTime);
                 break;
             case 'insertion':
-                await performInsertionSort(array, sortingSpeed, setStats, startTime);
+                performInsertionSort(array, sortingSpeed, setStats, startTime);
                 break;
             case 'merge':
-                await performMergeSort(array, sortingSpeed, setStats, startTime);
+                performMergeSort(array, sortingSpeed, setStats, startTime);
                 break;
             case 'quick':
-                await performQuickSort(array, sortingSpeed, setStats, startTime);
+                performQuickSort(array, sortingSpeed, setStats, startTime);
                 break;
             default:
-                await performBubbleSort(array, sortingSpeed, setStats, startTime);
+                performBubbleSort(array, sortingSpeed, setStats, startTime);
         }
         setIsSorting(false);
     };
