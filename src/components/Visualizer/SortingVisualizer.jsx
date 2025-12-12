@@ -6,12 +6,12 @@ import StatsPanel from './StatsPanel';
 import Controls from './Controls';
 import AlgoInfo from './AlgoInfo';
 
-import { randomIntFromInterval } from '../utils/mathUtils';
+import { randomIntFromInterval } from '../../utils/mathUtils.js';
 
-import { performBubbleSort } from '../algorithms/bubbleSort';
-import { performMergeSort } from '../algorithms/mergeSort';
-import { performQuickSort } from '../algorithms/quickSort';
-import { performSelectionSort, performInsertionSort } from '../algorithms/sortingHelpers';
+import { performBubbleSort } from '../../algorithms/bubbleSort';
+import { performMergeSort } from '../../algorithms/mergeSort';
+import { performQuickSort } from '../../algorithms/quickSort';
+import { performSelectionSort, performInsertionSort } from '../../algorithms/sortingHelpers';
 
 const SortingVisualizer = () => {
     const [array, setArray] = useState([]);
