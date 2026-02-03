@@ -27,6 +27,11 @@ const AlgoInfo = ({ selectedAlgo }) => {
             complexity: 'O(n log n)',
             desc: "An efficient algorithm that selects a 'pivot' element and partitions the array around it (smaller elements to the left, larger to the right). It is one of the fastest sorting algorithms in practice.",
         },
+        heap: {
+            title: 'Heap Sort',
+            complexity: 'O(n log n)',
+            desc: 'A comparison-based sorting technique based on a binary heap data structure. It builds a max heap from the input data and repeatedly extracts the maximum element to build the sorted array. It is efficient and has a good worst-case performance.',
+        },
     };
 
     const info = algoInfo[selectedAlgo] || algoInfo['bubble'];

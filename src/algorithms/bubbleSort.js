@@ -1,6 +1,6 @@
-import { sleep } from '../utils/common';
+import { handleStepControl } from '../utils/common';
 
-export const performBubbleSort = (array, sortingSpeed, setStats, startTime) => {
+export const performBubbleSort = async (array, speedRef, isPausedRef, isStoppedRef, setStats, startTime) => {
     const arr = [...array];
     const bars = document.getElementsByClassName('array-bar');
     let compCount = 0;
@@ -8,10 +8,12 @@ export const performBubbleSort = (array, sortingSpeed, setStats, startTime) => {
 
     for (let i = 0; i < arr.length - 1; i++) {
         for (let j = 0; j < arr.length - i - 1; j++) {
+            
+            await handleStepControl(speedRef, isPausedRef, isStoppedRef);
+
             bars[j].style.backgroundColor = 'red';
             bars[j + 1].style.backgroundColor = 'red';
 
-            sleep(100 - sortingSpeed);
             compCount++;
 
             if (arr[j] > arr[j + 1]) {
@@ -19,6 +21,7 @@ export const performBubbleSort = (array, sortingSpeed, setStats, startTime) => {
                 let temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                
                 bars[j].style.height = `${arr[j]}px`;
                 bars[j + 1].style.height = `${arr[j + 1]}px`;
             }
@@ -32,7 +35,9 @@ export const performBubbleSort = (array, sortingSpeed, setStats, startTime) => {
             bars[j].style.backgroundColor = '#3b82f6';
             bars[j + 1].style.backgroundColor = '#3b82f6';
         }
-        bars[arr.length - i - 1].style.backgroundColor = '#10b981';
+        if (bars[arr.length - i - 1]) {
+            bars[arr.length - i - 1].style.backgroundColor = '#10b981';
+        }
     }
-    bars[0].style.backgroundColor = '#10b981';
+    if (bars[0]) bars[0].style.backgroundColor = '#10b981';
 };

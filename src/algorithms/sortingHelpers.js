@@ -1,6 +1,6 @@
-import { sleep } from '../utils/common';
+import { handleStepControl } from '../utils/common';
 
-export const performSelectionSort = (array, sortingSpeed, setStats, startTime) => {
+export const performSelectionSort = async (array, speedRef, isPausedRef, isStoppedRef, setStats, startTime) => {
     const arr = [...array];
     const bars = document.getElementsByClassName('array-bar');
     let compCount = 0;
@@ -11,7 +11,7 @@ export const performSelectionSort = (array, sortingSpeed, setStats, startTime) =
         bars[minIndex].style.backgroundColor = 'red';
         for (let j = i + 1; j < arr.length; j++) {
             bars[j].style.backgroundColor = 'red';
-            sleep(100 - sortingSpeed);
+            await handleStepControl(speedRef, isPausedRef, isStoppedRef);
             compCount++;
             setStats({
                 comparisons: compCount,
@@ -39,7 +39,7 @@ export const performSelectionSort = (array, sortingSpeed, setStats, startTime) =
     }
 };
 
-export const performInsertionSort = (array, sortingSpeed, setStats, startTime) => {
+export const performInsertionSort = async (array, speedRef, isPausedRef, isStoppedRef, setStats, startTime) => {
     const arr = [...array];
     const bars = document.getElementsByClassName('array-bar');
     let compCount = 0;
@@ -53,7 +53,7 @@ export const performInsertionSort = (array, sortingSpeed, setStats, startTime) =
             swapCount++;
             bars[j].style.backgroundColor = 'red';
             bars[j - 1].style.backgroundColor = 'red';
-            sleep(100 - sortingSpeed);
+            await handleStepControl(speedRef, isPausedRef, isStoppedRef);
 
             let temp = arr[j];
             arr[j] = arr[j - 1];
