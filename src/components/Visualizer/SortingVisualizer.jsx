@@ -6,6 +6,7 @@ import StatsPanel from './StatsPanel';
 import Controls from './Controls';
 import AlgoInfo from './AlgoInfo';
 import TreeGraph from './TreeGraph'; 
+import ViewToggle from './ViewToggle.jsx'; 
 
 import { randomIntFromInterval } from '../../utils/mathUtils.js';
 import { wrapSortingAlgorithm } from '../../utils/common'; // Yeni sarmalayıcı
@@ -138,6 +139,7 @@ const SortingVisualizer = () => {
 
     return (
         <div className='visualizer-container'>
+            <ViewToggle viewMode={viewMode} setViewMode={setViewMode} isSorting={isSorting} />
             <div className='visualizer-display' style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
                 {viewMode === 'bars' ? (
                     <ArrayBars array={array} arraySize={arraySize} />
