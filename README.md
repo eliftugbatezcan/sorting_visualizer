@@ -1,16 +1,103 @@
-# React + Vite
+# Sorting Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A polished, interactive web application that visualizes classic sorting algorithms in real time. This project is built with modern React and Vite tooling and focuses on clarity, performance metrics, and educational value.
 
-Currently, two official plugins are available:
+![App Preview](public/preview/preview.png)
+![App Preview](public/preview/preview2.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## React Compiler
+- Live demo: https://sorting-visualizer-lime-alpha.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Algorithm visualizations for learning and experimentation
+- Adjustable array size and animation speed controls
+- Real-time metrics: comparisons, swaps, and elapsed time
+- Multiple views including bars and tree/graph representations
+- Clean, component-driven UI for easy extension
+
+---
+
+## Algorithms Included
+
+- Bubble Sort
+- Heap Sort
+- Merge Sort
+- Quick Sort
+
+The algorithm implementations live in `src/algorithms` and are separated from UI rendering.
+
+---
+
+## Tech Stack
+
+- **React 19** — UI library (functional components & hooks)
+- **Vite** — Development server and build tooling
+- **JavaScript (ES2020+)** — Application logic
+- **HTML5 & CSS3** — Markup and styling
+- **ESLint** — Linting and code quality
+- **Node.js & npm** — Local development and package management
+
+---
+
+## Getting Started
+
+Prerequisites:
+
+- Node.js (v16+ recommended)
+- npm (or yarn)
+
+Install and run locally:
+
+```bash
+git clone https://github.com/elifTugbatezcan/sorting_visualizer.git
+cd sorting-visualizer/sorting-visualizer
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Project Structure (high level)
+
+```
+src/
+├─ algorithms/        # Sorting algorithm implementations (pure JS)
+├─ components/        # Reusable React components (Visualizer, Controls, Panels)
+├─ utils/             # Helper utilities
+├─ App.jsx            # Root component
+└─ main.jsx           # App entry
+```
+
+---
+
+## Contributing
+
+Contributions are welcome. Typical improvements include adding new algorithms, improving accessibility, or enhancing visualizations. Please open an issue first to discuss larger changes.
+
+Suggested workflow:
+
+1. Fork the repository
+2. Create a feature branch
+3. Add tests or verify behavior locally
+4. Open a pull request with a clear description
+
+---
+
+## License & Acknowledgements
+
+This repository is provided as-is for educational purposes. Include a LICENSE file if you want to specify reuse terms.
+
+Thanks to the open-source community for the tooling (React, Vite, ESLint).
+
+---
